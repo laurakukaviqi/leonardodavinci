@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                background-color: rgb(190, 210, 216);
+            }
+            #form{
+                position: absolute;
+                top: 170px;
+                left: 380px;   
+                text-indent: 50px;
+                text-align: auto;
+                letter-spacing: 3px;
+                padding: 20px;
+                margin: 50px;
+                border: 2px solid rgb(152, 152, 211);
+                outline:rgb(52, 92, 180) solid 10px;
+                animation: mymove 4s infinite;
+                width: 530px;
+                height: 250px;
+            }
+            @keyframes mymove {
+                60% {outline-offset: 20px;}
+            }
+            #d1{
+                position: absolute;
+                top: 80px;
+                left: 60px;  
+            }
+            #in{
+                position: absolute;
+                top: 180px;
+                left: 430px;  
+            }
+            .radio{
+                position: absolute;
+                top: 80px;
+                left: 70px;  
+            }
+        </style>
+    </head>
+
+    <body>
+        
+        <form action="searchPedagog.php" method="post" id="form">
+            <h2 style="position: absolute; top: 30px; left: 150px;">Miresevini!</h2>
+
+            <label style="position: absolute; top: 130px; left: 55px;">Username:</label>
+            <input type="text" name="username" required style="position: absolute; top: 130px; left: 220px;" >
+            <br><br>
+            <label style="position: absolute; top: 180px; left: 55px;">Password:</label>
+            <input type="text" name="password" onclick="myFunction()" id="input" required style="position: absolute; top: 180px; left: 220px;">
+            <input id="in" type="submit" name="submit" value="Submit">
+        </form>
+
+        <script>
+            function myFunction() {
+              var x = document.getElementById("input");
+              if (x.type === "password") {
+                x.type = "text";
+              } 
+              else {
+                x.type = "password";
+              }
+            }
+        </script>
+            
+    </body>
+</html>
